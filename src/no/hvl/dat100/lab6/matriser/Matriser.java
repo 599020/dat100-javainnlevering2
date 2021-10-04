@@ -5,37 +5,82 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		for (int [] rad : matrise) {
+			
+			for ( int plass : rad ) {
+				System.out.print(plass + " ");
+			}
+		System.out.println();
+		}
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
+		String utSkrift = "";
 		
+		for (int [] rad : matrise) {
+			System.out.print("\n");
+			for (int plass : rad ) {
+				utSkrift = plass + ",";
+				System.out.print(utSkrift + " ");
+			}
+			
+		}
+			System.out.println();
+			return utSkrift;
 	}
 
 	// c)
-	public static int[][] skaler(int tall, int[][] matrise) {
+	public static int skaler(int tall, int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
+		int sum = 0;
+		
+		for (int [] rad : matrise) {
+			
+			for ( int plass : rad ) {
+				 sum = plass * tall;
+				 if (sum < 10) {
+					 System.out.print(sum + "  ");
+				 }
+				 else 
+				System.out.print(sum + " ");
+			}
+			System.out.println();
+		}
+		return sum;
+
+
+
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
+		
+		boolean like = true;
+		
+		for (int r = 0; r < a.length; r++) {
+			
+			for ( int p = 0; p < a[r].length; p++ ) {
+				if (a[r][p] != b[r][p]) {
+					like = false;
+					
+					
+				}
+				 
+			}
+		}
+		System.out.println(like);
+		return like;
+		
 
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
 	}
+		
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
-		// TODO
+		// Valgte ikke å gjøre denne
 		throw new UnsupportedOperationException("speile ikke implementert");
 	
 	}
@@ -43,7 +88,7 @@ public class Matriser {
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		// TODO
+		// Valgte ikke å gjøre denne
 		throw new UnsupportedOperationException("multipliser ikke implementert");
 	
 	}
